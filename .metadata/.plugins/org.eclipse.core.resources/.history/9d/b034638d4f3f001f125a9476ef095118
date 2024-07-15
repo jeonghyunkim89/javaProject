@@ -1,0 +1,10 @@
+package com.kh.ch05_object;
+
+public class ObjectRun {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

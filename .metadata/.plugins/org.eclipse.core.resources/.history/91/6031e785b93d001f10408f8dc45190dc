@@ -1,0 +1,15 @@
+package com.kh.practice.map.controller;
+
+import java.util.HashMap;
+
+public class MemberController {
+	
+	private HashMap map = new HashMap();
+	
+	public boolean joinMembership(String id, Member m) {}
+	public String login(String id, String password) {}
+	public boolean changePassword(String id, String oldPw, String newPw) {}
+	public void changeName(String id, String newName) {}
+	public TreeMap sameName(String name) {}
+
+}

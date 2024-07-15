@@ -1,0 +1,15 @@
+package com.kh.practice.set.model.compare;
+
+public class SortedLottery {
+	
+	private String name;
+	private String phone;
+	
+	public Lottery() {}
+	public Lottery(String name, String phone) {
+		this.name = name;
+		this.phone = phone;
+	}
+
+	
+}

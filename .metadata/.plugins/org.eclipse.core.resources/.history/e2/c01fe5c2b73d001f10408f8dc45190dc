@@ -1,0 +1,13 @@
+package com.kh.practice.map.model.vo;
+
+public class Member {
+	
+	public Member() {}
+	public Member(String password, String name) {}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
+	}
+	
+}

@@ -1,0 +1,8 @@
+package com.kh.practice;
+
+//Thread정의방법 1) Thread 클래스 상속
+public class Task1 extends Thread {
+	
+	
+
+}

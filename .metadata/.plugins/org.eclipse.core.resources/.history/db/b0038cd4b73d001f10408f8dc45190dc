@@ -1,0 +1,18 @@
+package com.kh.practice.map.view;
+
+import java.util.Scanner;
+
+public class MemberMenu {
+	
+	private Scanner sc = new Scanner(System.in);
+	private MemberController mc = new MemberController();
+	
+	public void mainMenu() {}
+	public void memberMenu() {}
+	public void joinMembership() {}
+	public void login() {}
+	public void changePassword() {}
+	public void changeName() {}
+	public void sameName() {}
+
+}

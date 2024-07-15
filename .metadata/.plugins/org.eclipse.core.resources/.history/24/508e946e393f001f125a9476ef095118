@@ -1,0 +1,37 @@
+package com.kh.ch01_control;
+
+import java.util.Scanner;
+
+public class ControlRun {
+
+	public static void main(String[] args) {
+
+		/*
+		 * * 프로그램의 진행은 순차적으로 진행됨 (위에서 아래로, 왼쪽에서 오른쪽으로)
+		 * 	 이 흐름을 바꾸고자할 때 제어문을 통해 직접 제어 가능
+		 * 
+		 * 	- 선택적으로 실행시키고자 할 때 => 조건문 
+		 * 	- 반복적으로 실행시키고자 할 때 => 반복문
+		 * 	- 그 외 흐름 제어 => 분기문
+		 * 
+		 * 	* 조건문 : 조건식을 통해 참/거짓에 따라 코드를 실행
+		 * 	- 종류
+		 * 		[1] if문
+		 * 		[2] switch문
+		 * 		[3] 
+		 * 
+		 */
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("숫자 입력 : ");
+		int num = sc.nextInt();
+		
+		// 입력된 값이 양수인지 양수가 아닌지 판별
+		if (num > 0) {	//조건식의 결과 true인 경우 if 중괄호 안의 코드 실행
+			System.out.println(num+"의 값은 양수다.");
+		} else {	//조건식의 결과가 false인 경우 else 중괄호 안의 코드 실행
+			System.out.println(num+"의 값은 양수가 아니다.");
+		}
+	}
+
+}

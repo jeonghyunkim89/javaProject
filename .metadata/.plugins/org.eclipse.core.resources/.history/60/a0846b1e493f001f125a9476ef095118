@@ -1,0 +1,10 @@
+package com.kh.ch04_array;
+
+public class ArrayRun {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

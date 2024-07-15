@@ -1,0 +1,74 @@
+package com.kh.ch01_operator;
+
+public class OperatorRun {
+	
+	public static void main(String[] agrs) {
+	
+	/*
+	 * * 논리 부정 연산자 (단항 연산자 : 하나의 값을 가지고 연산 수행)
+	 * 	 - 연산자 : !
+	 * 	 - 논리값(ture/false)을 반대로 바꿔주는 연산자
+	 * 
+	 * 
+	 */
+	
+	System.out.println("true의 값을 부정 : "+ !true);		//=>false
+	System.out.println("false의 값을 부정 : "+ !false);		//=>true
+	
+	boolean b1 = true;
+	System.out.println("b1의 값을 부정 : "+ !b1);		// !true => false
+	
+	boolean b2 = !b1;	//b2 => false
+	
+	boolean b3 = !(10 % 2 == 0); //b3 => flase. 연산 결과의 값을 부정하여 대입
+	
+	//-------------------------------------------------------------------
+	/*
+	 * 증감 연산자 (단항연산자)
+	 * - 연산자
+	 * 		[1] ++ : 변수에 담긴 값을 1씩 증가시키는 연산자
+	 * 		[2] -- : 변수에 담긴 값을 1씩 감소시키는 연산자
+	 * 
+	 * - 다른 연산이 있을 경우
+	 * 		* 전위 연산 : (증감연산자)변수 => 선 증감 후 처리(다른 연산 수행)
+	 * 		* 후위 연산 : 변수(증감연산자) => 선 처리 후 증감
+	 */
+	int i1 = 10;
+	System.out.println("1) i1 = "+i1);		//i1 => 10
+	System.out.println("2) ++i1 = "+ ++i1); //i1 => 11
+	System.out.println("3) i1++ = "+ i1++); //i1 => 11, 출력 후 i1의 값 증가 : 12
+	System.out.println("4) i1 = "+ i1); 	//i1 => 12
+	
+	int i2 = ++i1;
+	System.out.println("5) i1 = "+i1+", i2 = "+i2); // i1=13, i2=13
+	
+	int i3 = i1++;
+	System.out.println("6) i1 = "+i1+", i3 ="+i3);	//i1=14, i3=13
+	
+	int i4 = i1++ *5;
+	System.out.println("7) i1 = "+i1+", i4 ="+i4 ); //i1=15, i4=70
+	
+	int a = 5;
+	int b = 10;
+	int c = ++a;
+	int d = a+ --b + c++;
+	int e = d++ *10 +(b++-10);
+	
+	System.out.println("a = "+a);
+	System.out.println("b = "+b);
+	System.out.println("c = "+c);
+	System.out.println("d = "+d);
+	System.out.println("e = "+e);
+	
+	/*
+	 * -------------------------------------------------------------
+	 * * 산술 연산자 (이항 연산자 : 두 개의 값을 가지고 연산 수행)
+	 * 	- 연산자 : + - * % /
+	 * 	- 우선순위 : *  / % > + -
+	 * 
+	 */
+	int n1 = 10;
+	int n2 = 5;
+	System.out.println("n1+n2 = "+ n1 + n2); // 결과 ? n1 + n2 =15
+	}
+}

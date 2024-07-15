@@ -1,0 +1,189 @@
+package com.kh.practice.array;
+
+import java.util.Scanner;
+
+public class ArrayPractice {
+
+	public void practice1() {
+		// 1. 길이가 10인 배열 선언(1부터 10까지의 값을 저장 => int)
+		// 2. 반복문을 사용하여 배열 인덱스에 그 값을 저장
+		// 3. 반복문을 사용하여 각 인덱스의 값을 출력
+		int[] arr = new int[10];
+
+		for (int i = 0; i < 10; i++) {
+			// 인덱스 시작번호 : 0
+			arr[i] = i + 1; // arr[0]=0+1;
+		}
+		for (int i = 0; i < 10; i++) {
+			System.out.print(arr[i]);
+			if (i != 9) {
+				System.out.print(" ");
+			}
+		}
+	}
+
+	/*
+	 * public void practice2() { int[]arr = new int [10];
+	 * 
+	 * for (int j=9; j>=0; j--) { arr[j] = j+1; } for (int j=9; j>=0; j--) {
+	 * System.out.print(arr[j]); if (j !=0) { System.out.print(" "); } } }
+	 */
+	public void practice2() {
+		int[] arr = new int[10];
+
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = arr.length - i;
+			System.out.printf("i=%d arr[i]=%d\n", i, arr[i]);
+		}
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i]);
+			if (i != arr.length - 1) {
+				System.out.print(" ");
+			}
+		}
+	}
+
+	public void practice3() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("양의 정수 : ");
+		int n1 = sc.nextInt();
+
+		// 입력받은 정수값의 길이 만큼 배열을 생성
+		// * 자료형[] 변수명 = new 자료형[배열길이];
+
+		int[] arr = new int[n1];
+
+		if (n1 > 0) {
+			for (int i = 0; i < n1; i++) {
+				arr[i] = i + 1;
+			}
+			for (int i = 0; i < n1; i++) {
+				System.out.print(arr[i]);
+				if (i != n1 - 1) {
+					System.out.print(" ");
+				}
+			}
+		}
+
+	}
+
+	public void practice4() {	//문자열 배열 선언
+
+		String[] arr = new String[5];
+
+		arr[0] = "사과";
+		arr[1] = "귤";
+		arr[2] = "포도";
+		arr[3] = "복숭아";
+		arr[4] = "참외";
+		
+		/* 다른 문자열 배열 선언방법
+		 * String[] arr = new String[]{"사과", "귤", "포도", "복숭아", "참외"};
+		 * String[] arr = {"사과", "귤", "포도", "복숭아", "참외"};
+		 */
+		System.out.println(arr[1]);
+		
+		// for(int i=0; i<arr.length; i++){
+		//		if(arr[i].equals("귤")) {
+		//			System.out.print(arr[i]);
+		//		}
+
+	}
+
+	public void practice5() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("문자열 : ");
+		String str = sc.nextLine();
+		
+		System.out.print("문자 : ");
+		char ch = sc.next().charAt(0);
+		
+		//문자열의 길이 : 문자열_변수/값.length()
+		//배열 길이 : 배열_변수/값.length
+		char[] arrCh= new char[str.length()];
+		
+		//입력받은 문자열을 배열에 문자 하나하나 저장 => 문자형 배열
+						
+		for(int i=0; i<arrCh.length; i++) {
+			arrCh[i]=str.charAt(i);
+			// str = "apple";
+			// str.charAt(0) : a
+			// str.charAt(1) : p
+			// str.charAt(2) : p			
+		}
+		System.out.printf("%s에 %c가 존재하는 위치(인덱스) : ", str, ch);
+		int count = 0;
+		for(int i=0; i<arrCh.length; i++) {
+			if(arrCh[i] == ch) {  //문자형 배열의 i번째 값과 사용자가 입력한 문자값이 같다면
+				count++;			// 개수를 증가시키고,
+				System.out.print(i+" ");	//해당 위치의 인덱스 값을 출력
+			}
+		}
+		System.out.println();
+		System.out.println(ch+ "의 개수: "+count);
+	}
+	
+	public void practice6() {	//문자열 배열에 "월" ~ "일"까지 초기화
+		String[] days= {"월", "화", "수", "목", "금", "토", "일"};
+		
+		//0부터 6까지 입력받기
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("0 ~ 6 사이 숫자 입력 : ");
+		int num = sc.nextInt();
+		
+		//0부터 6까기 범위의 숫자가 아닌 경우 "잘못 입력하셨습니다"를 출력
+		
+		if(num <0 || num >6) { //num => -1, -2, ... 또는 7, 8, 9, ...)
+			System.out.println("잘못 입력하셨습니다.");
+		} else {
+			System.out.println(days[num]+"요일");
+		}
+		// 0부터 6까지의 범위의 숫자인 경우만 요일을 출력
+		if ( num >=0 && num < days.length) {
+			System.out.println(days[num]+"요일");
+		} else {
+			System.out.println("잘못 입력하셨습니다.");
+		}
+	}
+	
+	public void practice7() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("정수 : ");
+		int n = sc.nextInt();
+		
+		//정수형 배열 선언 및 생성(배열길이 : 입력받은 정수 값)
+		int[] arr = new int[n];
+				
+		for(int i= 0; i<arr.length; i++) { //i : 0,1,2,n-1
+			System.out.print("배열" +i+ "번째 인덱스에 넣을 값 : ");
+			arr[i] = sc.nextInt(); //arr배열의 i번째 위치에 입력된 값을 대입
+		}
+		
+		int sum = 0;
+		for(int i=0; i<arr.length; i++) {
+			System.out.print(arr[i]+" ");
+			sum += arr[i]; 
+		}
+		
+		System.out.println("\n총 합 : " +sum);
+	}
+	
+	public void practice8() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 : ");
+		int n = sc.nextInt();
+		
+		int[] arr = new int[n];
+		
+		for(int i=0; n%3!=0 || n<3; i++) {
+			System.out.println("다시 입력하세요.");
+			System.out.println("정수 : ");
+			sc.nextInt();	
+		}
+		
+	}
+}

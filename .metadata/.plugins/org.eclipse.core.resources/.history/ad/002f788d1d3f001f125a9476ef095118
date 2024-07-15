@@ -1,0 +1,74 @@
+package com.kh.ch01_variable;
+
+public class Variable {
+
+	public static void main(String[] args) {
+
+		/*
+		 * * 변수를 사용하는 이유
+		 * 	1) 값에 의미를 부여하기 위해 사용 (가독성이 높아짐)
+		 * 		ex. System.out.println(3.141592 * 10);
+		 * 			double pi = 3.1415;
+		 * 			System.out.println(pi * 10);
+		 * 	2) 한번 값을 기록하고 필요할 때마다 사용 (재사용성이 높아짐)
+		 * 	3) 유지보수를 보다 쉽게 할 수 있음
+		 * --------------------------------------------
+		 * * 변수의 선언 : 값을 기록하기 위한 변수를 메모리 공간에 확보(할당)하는것
+		 * 
+		 * 	[표현법]
+		 * 		자료형 변수이름;
+		 * 		* 자료형 : 변수의 크기와 모양을 지정하는 부분
+		 * 		* 변수이름 : 변수의 이름을 붙여주는 부분
+		 * 
+		 * 	- 변수 선언 시 주의할 점
+		 * 	  1) 변수의 이름은 소문자로 시작(낙타표기법(카멜케이스)를 지켜야 함. 예약어 사용 불가) 
+		 * 	  2) 같은 영역 안({})에서는 동일한 이름으로 변수 선언 불가 -> 중복 불가
+		 * 	  3) 해당 영역 안({})에 선언된 변수는 그 영역안에서만 사용 가능 -> 다른 영역에서는 사용 불가
+		 * 
+		 */
+		// --- 자료형 종류 ---
+		// 1. 논리형 (논리값 - true/false), 1byte 크기, boolean
+		boolean isTrue;		// 변수선언
+		boolean isFalse = false; 	// 변수 선언과 동시에 값을 대입(초기화)
+		
+		isTrue = 1 + 3 > 0;		// 어떤 연산의 결과가 true 또는 false인 경우 연산 결과 값을 저장할 수 있음
+		
+		// 2. 정수형 (소숫점 X)
+		byte bNum;		// 1byte 크기. -128 ~ 127
+		bNum = -128;
+		
+		short sNum;
+		sNum = 1000;	// 2byte 크기.
+		
+		int iNum = 10000; // 4byte 크기. 정수형 기본 자료형.
+		
+		long lNum = 100000L;	// 8byte 크기.
+		
+		// 3. 실수형 (소숫점 O)
+		float fNum = 0.0f;	// 4byte 크기. 소숫점 7자리까지 표현가능.
+							// double형과 구분하기 위해 값 뒤에 'f'를 붙여줌.
+		double dNum = 0.0;	// 8byte 크기. 소숫점 15자리까지 표현가능.
+							// 실수형 기본 자료형.
+		
+		// 4. 문자형 : 한 글자에 값만 저장할 수 있는 자료형. 작은 따옴표('')로 값을 표현.
+		char ch = 'a'; 		// 2byte 크기.
+		char hong = '홍';	//=> 컴퓨터에서는 각각의 문자들에 대한 고유한 숫자를 가지고 있음 (아스키 코드 ascii/ unicode)
+		
+		// 5. 문자열 : 한 글자도 저장할 수 있고 여러글자도 저장할 수 있는 자료형. 큰 따옴표("")로 값을 표현.
+		String str;		// 참조 자료형 (클래스)
+		str = "안녕?";
+		
+		// 저장된 값을 콘솔창에 출력해보자! ("변수명 : 저장된 값" 형식으로 출력)
+		System.out.println(bNum);
+		System.out.println(sNum);
+		System.out.println(iNum);
+		System.out.println(lNum);
+		System.out.println(fNum);
+		System.out.println(dNum);
+		System.out.println(ch);
+		System.out.println(hong);
+		System.out.println(str);
+		
+	}
+
+}

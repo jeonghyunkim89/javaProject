@@ -1,0 +1,19 @@
+package com.kh.practice.map.controller;
+
+import java.util.HashMap;
+import java.util.TreeMap;
+
+public class MemberController {
+	
+	private HashMap map = new HashMap();
+	
+	public boolean joinMembership(String id, Member m) {
+		// 전달 받은 id가 없다면 id와 m을 map에 추가 후 true 반환 
+		// 있다면 false 값 반환
+	}
+	public String logIn(String id, String password) {}
+	public boolean changePassword(String id, String oldPw, String newPw) {}
+	public void changeName(String id, String newName) {}
+	public TreeMap sameName(String name) {}
+
+}

@@ -1,0 +1,19 @@
+package com.kh.ch11_api;
+
+public class API01_Math {
+	
+	public static void main(String[] args) {
+		System.out.println("===== java.lang.Math =====");
+		
+		// abs : 절대값을 구해주는 메소드
+		int n =100;
+		System.out.println("-10ml 절대값 : "+Math.abs(-10));
+		System.out.println(n+"의 절대값 : "+Math.abs(n));
+		
+		// ceil : 소숫점을 올림처리 해주는 메소드
+		double d = 3.141592;
+		System.out.println(d+"의 값을 올림처리 : "+Math.ceil(d));
+		
+	}
+
+}

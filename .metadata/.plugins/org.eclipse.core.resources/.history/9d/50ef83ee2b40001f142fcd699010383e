@@ -1,0 +1,5 @@
+package com.kh.ch13_generics;
+
+public class Box {
+
+}

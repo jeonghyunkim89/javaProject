@@ -1,0 +1,10 @@
+package com.kh.ch01_control;
+
+public class ControlRun {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
